@@ -34,7 +34,6 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="paxplot" href="generated/paxplot.html" />
     <link rel="prev" title="Usage with Pandas" href="pandas_usage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -124,14 +123,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="generated/paxplot.html">
-   paxplot
-  </a>
- </li>
-</ul>
-
+    
   </div>
 </nav>
               </div>
@@ -169,11 +161,225 @@
               
               <div>
                 
-  <section id="api">
-<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+  <section id="module-paxplot.core">
+<span id="api"></span><h1>API<a class="headerlink" href="#module-paxplot.core" title="Permalink to this headline">¶</a></h1>
+<p>Core paxplot functions</p>
+<dl class="class">
+<dt id="paxplot.core.PaxFigure">
+<em class="property">class </em><code class="sig-prename descclassname">paxplot.core.</code><code class="sig-name descname">PaxFigure</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">data=[]</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="paxplot.core.PaxFigure.add_colorbar">
+<code class="sig-name descname">add_colorbar</code><span class="sig-paren">(</span><em class="sig-param">ax_idx</em>, <em class="sig-param">cmap='viridis'</em>, <em class="sig-param">colorbar_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.add_colorbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add colorbar to paxfigure</p>
+<dl class="simple">
+<dt>ax<span class="classifier">int</span></dt><dd><p>axes index</p>
+</dd>
+<dt>data<span class="classifier">array-like</span></dt><dd><p>Data to be plotted</p>
+</dd>
+<dt>cmap<span class="classifier">str</span></dt><dd><p>Matplotlib colormap to use for coloring</p>
+</dd>
+<dt>colorbar_kwargs<span class="classifier">dict</span></dt><dd><p>Matplotlib colorbar keyword arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.add_legend">
+<code class="sig-name descname">add_legend</code><span class="sig-paren">(</span><em class="sig-param">labels</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.add_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a legend for a specified figure</p>
+<dl class="simple">
+<dt>labels<span class="classifier">list</span></dt><dd><p>List of data labels</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.default_format">
+<code class="sig-name descname">default_format</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.default_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the default format of a Paxplot Figure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.invert_axis">
+<code class="sig-name descname">invert_axis</code><span class="sig-paren">(</span><em class="sig-param">ax_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.invert_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invert axis.</p>
+<dl class="simple">
+<dt>ax_idx<span class="classifier">int</span></dt><dd><p>Index of matplotlib axes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.plot">
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the supplied data</p>
+<dl class="simple">
+<dt>data<span class="classifier">array-like</span></dt><dd><p>Data to be plotted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.set">
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">agg_filter=&lt;UNSET&gt;</em>, <em class="sig-param">alpha=&lt;UNSET&gt;</em>, <em class="sig-param">animated=&lt;UNSET&gt;</em>, <em class="sig-param">canvas=&lt;UNSET&gt;</em>, <em class="sig-param">clip_box=&lt;UNSET&gt;</em>, <em class="sig-param">clip_on=&lt;UNSET&gt;</em>, <em class="sig-param">clip_path=&lt;UNSET&gt;</em>, <em class="sig-param">constrained_layout=&lt;UNSET&gt;</em>, <em class="sig-param">constrained_layout_pads=&lt;UNSET&gt;</em>, <em class="sig-param">dpi=&lt;UNSET&gt;</em>, <em class="sig-param">edgecolor=&lt;UNSET&gt;</em>, <em class="sig-param">even_ticks=&lt;UNSET&gt;</em>, <em class="sig-param">facecolor=&lt;UNSET&gt;</em>, <em class="sig-param">figheight=&lt;UNSET&gt;</em>, <em class="sig-param">figwidth=&lt;UNSET&gt;</em>, <em class="sig-param">frameon=&lt;UNSET&gt;</em>, <em class="sig-param">gid=&lt;UNSET&gt;</em>, <em class="sig-param">in_layout=&lt;UNSET&gt;</em>, <em class="sig-param">label=&lt;UNSET&gt;</em>, <em class="sig-param">lim=&lt;UNSET&gt;</em>, <em class="sig-param">linewidth=&lt;UNSET&gt;</em>, <em class="sig-param">path_effects=&lt;UNSET&gt;</em>, <em class="sig-param">picker=&lt;UNSET&gt;</em>, <em class="sig-param">rasterized=&lt;UNSET&gt;</em>, <em class="sig-param">size_inches=&lt;UNSET&gt;</em>, <em class="sig-param">sketch_params=&lt;UNSET&gt;</em>, <em class="sig-param">snap=&lt;UNSET&gt;</em>, <em class="sig-param">ticks=&lt;UNSET&gt;</em>, <em class="sig-param">tight_layout=&lt;UNSET&gt;</em>, <em class="sig-param">transform=&lt;UNSET&gt;</em>, <em class="sig-param">url=&lt;UNSET&gt;</em>, <em class="sig-param">visible=&lt;UNSET&gt;</em>, <em class="sig-param">zorder=&lt;UNSET&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set multiple properties at once.</p>
+<p>Supported properties are</p>
+<dl class="simple">
+<dt>Properties:</dt><dd><p>agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array
+alpha: scalar or None
+animated: bool
+canvas: FigureCanvas
+clip_box: <cite>.Bbox</cite>
+clip_on: bool
+clip_path: Patch or (Path, Transform) or None
+constrained_layout: bool or dict or None
+constrained_layout_pads: float, default: <a href="#system-message-1"><span class="problematic" id="problematic-1">:rc:`figure.constrained_layout.w_pad`</span></a>
+dpi: float
+edgecolor: color
+even_ticks: int
+facecolor: color
+figheight: float
+figure: <cite>.Figure</cite>
+figwidth: float
+frameon: bool
+gid: str
+in_layout: bool
+label: int
+lim: int
+linewidth: number
+path_effects: <cite>.AbstractPathEffect</cite>
+picker: None or bool or float or callable
+rasterized: bool
+size_inches: (float, float) or float
+sketch_params: (scale: float, length: float, randomness: float)
+snap: bool or None
+ticks: int
+tight_layout: bool or dict with keys “pad”, “w_pad”, “h_pad”, “rect” or None
+transform: <cite>.Transform</cite>
+url: str
+visible: bool
+zorder: float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.set_even_ticks">
+<code class="sig-name descname">set_even_ticks</code><span class="sig-paren">(</span><em class="sig-param">ax_idx</em>, <em class="sig-param">n_ticks=6</em>, <em class="sig-param">minimum=None</em>, <em class="sig-param">maximum=None</em>, <em class="sig-param">precision=2</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.set_even_ticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set evenly spaced axis ticks between minimum and maximum value. If
+no minimum and maximum values are specified, the limits of the
+underlying plotted data are assumed.</p>
+<dl class="simple">
+<dt>ax_idx<span class="classifier">int</span></dt><dd><p>Index of matplotlib axes</p>
+</dd>
+<dt>n_ticks<span class="classifier">int</span></dt><dd><p>Number of ticks</p>
+</dd>
+<dt>minimum<span class="classifier">numeric</span></dt><dd><p>minimum value for ticks</p>
+</dd>
+<dt>maximum<span class="classifier">numeric</span></dt><dd><p>maximum value for ticks</p>
+</dd>
+<dt>precision<span class="classifier">int</span></dt><dd><p>number of decimal points for tick labels</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.set_label">
+<code class="sig-name descname">set_label</code><span class="sig-paren">(</span><em class="sig-param">ax_idx</em>, <em class="sig-param">label</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.set_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the label for the axis</p>
+<dl class="simple">
+<dt>ax_idx<span class="classifier">int</span></dt><dd><p>Index of matplotlib axes</p>
+</dd>
+<dt>label<span class="classifier">str</span></dt><dd><p>The label text</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.set_lim">
+<code class="sig-name descname">set_lim</code><span class="sig-paren">(</span><em class="sig-param">ax_idx</em>, <em class="sig-param">bottom</em>, <em class="sig-param">top</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.set_lim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set custom limits on axis</p>
+<dl class="simple">
+<dt>ax_idx<span class="classifier">int</span></dt><dd><p>Index of matplotlib axes</p>
+</dd>
+<dt>bottom<span class="classifier">numeric</span></dt><dd><p>Lower limit</p>
+</dd>
+<dt>top<span class="classifier">numeric</span></dt><dd><p>Upper limit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.core.PaxFigure.set_ticks">
+<code class="sig-name descname">set_ticks</code><span class="sig-paren">(</span><em class="sig-param">ax_idx</em>, <em class="sig-param">ticks</em>, <em class="sig-param">labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.PaxFigure.set_ticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the axis tick locations and optionally labels.</p>
+<dl class="simple">
+<dt>ax_idx<span class="classifier">int</span></dt><dd><p>Index of matplotlib axes</p>
+</dd>
+<dt>ticks<span class="classifier">list of floats</span></dt><dd><p>List of tick locations.</p>
+</dd>
+<dt>labels<span class="classifier">list of str, optional</span></dt><dd><p>List of tick labels. If not set, the labels show the data value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="paxplot.core.get_color_gradient">
+<code class="sig-prename descclassname">paxplot.core.</code><code class="sig-name descname">get_color_gradient</code><span class="sig-paren">(</span><em class="sig-param">val</em>, <em class="sig-param">minimum</em>, <em class="sig-param">maximum</em>, <em class="sig-param">colormap</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.get_color_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get color gradient values for the <cite>val</cite></p>
+<dl class="simple">
+<dt>val<span class="classifier">float</span></dt><dd><p>value to get color for scaling</p>
+</dd>
+<dt>minimum<span class="classifier">float</span></dt><dd><p>Minimum value</p>
+</dd>
+<dt>maximum<span class="classifier">float</span></dt><dd><p>Minimum value for scaling</p>
+</dd>
+<dt>colormap<span class="classifier">str</span></dt><dd><p>Matplotlib colormap to use for coloring</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>color: str</dt><dd><p>string color code</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="paxplot.core.pax_parallel">
+<code class="sig-prename descclassname">paxplot.core.</code><code class="sig-name descname">pax_parallel</code><span class="sig-paren">(</span><em class="sig-param">n_axes</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.pax_parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for paxplot analagous to the matplotlib.pyplot.subplots function</p>
+<dl class="simple">
+<dt>n_axes<span class="classifier">int</span></dt><dd><p>Number of axes to create</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>fig<span class="classifier">PaxFigure</span></dt><dd><p>Paxplot figure class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="paxplot.core.scale_val">
+<code class="sig-prename descclassname">paxplot.core.</code><code class="sig-name descname">scale_val</code><span class="sig-paren">(</span><em class="sig-param">val</em>, <em class="sig-param">minimum</em>, <em class="sig-param">maximum</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.core.scale_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale a value linearly between a minimum and maximum value</p>
+<dl class="simple">
+<dt>val<span class="classifier">numeric</span></dt><dd><p>Numeric value to be scaled</p>
+</dd>
+<dt>minimum<span class="classifier">numeric</span></dt><dd><p>Minimum value to linearly scale between</p>
+</dd>
+<dt>maximum<span class="classifier">numeric</span></dt><dd><p>Maximum value to lineraly scale between</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>val_scaled<span class="classifier">numeric</span></dt><dd><p>Scaled <cite>val</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
 <table class="longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">paxplot</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.core.PaxFigure" title="paxplot.core.PaxFigure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure</span></code></a>(*args[, data])</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -192,13 +398,6 @@
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Usage with Pandas</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="generated/paxplot.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">paxplot</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
               
