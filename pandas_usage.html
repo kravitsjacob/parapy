@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to paxplot’s documentation! &#8212; paxplot v1.0 documentation</title>
+    <title>Usage with Pandas &#8212; paxplot v1.0 documentation</title>
     
     <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -34,7 +34,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="getting_started.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Advanced Usage" href="advanced_usage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -52,7 +53,7 @@
   <div id="navbar-start">
     
     
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="index.html">
 <p class="title">paxplot</p>
 </a>
 
@@ -81,8 +82,8 @@
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="pandas_usage.html">
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
   Usage with Pandas
  </a>
 </li>
@@ -139,31 +140,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Welcome to paxplot’s documentation!
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contents">
-     Contents
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indices-and-tables">
-   Indices and tables
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -183,57 +162,38 @@
               
               <div>
                 
-  <section id="welcome-to-paxplot-s-documentation">
-<h1>Welcome to paxplot’s documentation!<a class="headerlink" href="#welcome-to-paxplot-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p><strong>paxplot</strong> is a simple tool for creating parallel plots in python</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install paxplot
+  <section id="usage-with-pandas">
+<h1>Usage with Pandas<a class="headerlink" href="#usage-with-pandas" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> library offers many tools for importing and processing data. Here is an example of using paxplot to plot data in a pandas <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">DataFrame</a>. We will use the <code class="code docutils literal notranslate"><span class="pre">tradeoff</span></code> dataset included with paxplot, but the example is fairly generic to any dataframe.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">paxplot</span>
+
+<span class="c1"># Import data</span>
+<span class="n">path_to_data</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">tradeoff</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path_to_data</span><span class="p">)</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="c1"># Create figure</span>
+<span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">cols</span><span class="p">))</span>
+<span class="n">paxfig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+
+<span class="c1"># Add labels</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+    <span class="n">paxfig</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
+
+<span class="c1"># Add colorbar</span>
+<span class="n">color_col</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">paxfig</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span>
+    <span class="n">ax_idx</span><span class="o">=</span><span class="n">color_col</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+    <span class="n">colorbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">cols</span><span class="p">[</span><span class="n">color_col</span><span class="p">]}</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This project is under active development.</p>
-</aside>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html#basic-usage">Basic Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="getting_started.html#creating-a-simple-plot">Creating a Simple Plot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="getting_started.html#adding-labels">Adding Labels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="getting_started.html#saving-your-plot">Saving Your Plot</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#change-number-of-ticks">Change Number of Ticks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#custom-ticks">Custom Ticks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#change-axis-limits">Change Axis Limits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#axis-inversion">Axis Inversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#adding-a-legend">Adding a Legend</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#adding-a-legend-1">Adding a Legend</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced_usage.html#accessing-matplotlib-objects">Accessing Matplotlib Objects</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="pandas_usage.html">Usage with Pandas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/paxplot.html">paxplot</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</section>
-</section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
-</section>
+<img alt="_images/pandas.svg" src="_images/pandas.svg" /></section>
 
 
               </div>
@@ -241,10 +201,17 @@
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="getting_started.html" title="next page">
+    <a class='left-prev' id="prev-link" href="advanced_usage.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Advanced Usage</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="api.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Getting Started</p>
+        <p class="prev-next-title">API</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
