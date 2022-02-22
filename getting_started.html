@@ -95,7 +95,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="api.html">
-  API
+  API Reference
  </a>
 </li>
 
@@ -212,9 +212,9 @@
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
 <p>We run through the basic functionality of paxplot using the following synthetic dataset. Note that paxplot requires its input be a list of lists or a similar matrix-like format. For usage with pandas see advanced usage.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-   <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span>
-   <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
-   <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+   <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+   <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+   <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -224,7 +224,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paxplot</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">paxfig</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">paxfig</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">paxfig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -233,23 +233,9 @@
 <section id="adding-labels">
 <h3>Adding Labels<a class="headerlink" href="#adding-labels" title="Permalink to this headline">¶</a></h3>
 <p>Let’s say these columns in <code class="code docutils literal notranslate"><span class="pre">data</span></code> correspond to some the labels A, B, and C. We can add those labels!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paxplot</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">paxfig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">paxfig</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span>
-   <span class="n">ax_idx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-   <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span>
-<span class="p">)</span>
-<span class="n">paxfig</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span>
-   <span class="n">ax_idx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-   <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span>
-<span class="p">)</span>
-<span class="n">paxfig</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span>
-   <span class="n">ax_idx</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-   <span class="n">label</span><span class="o">=</span><span class="s1">&#39;C&#39;</span>
-<span class="p">)</span>
+<span class="n">paxfig</span><span class="o">.</span><span class="n">set_labels</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
