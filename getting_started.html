@@ -220,7 +220,7 @@
 </div>
 <section id="creating-a-simple-plot">
 <h3>Creating a Simple Plot<a class="headerlink" href="#creating-a-simple-plot" title="Permalink to this headline">¶</a></h3>
-<p>First, we will create a simple plot of our <code class="code docutils literal notranslate"><span class="pre">data</span></code></p>
+<p>First, we will create a simple plot of our <code class="code docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paxplot</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -232,7 +232,7 @@
 <img alt="_images/basic.svg" src="_images/basic.svg" /></section>
 <section id="adding-labels">
 <h3>Adding Labels<a class="headerlink" href="#adding-labels" title="Permalink to this headline">¶</a></h3>
-<p>Let’s say these columns in <code class="code docutils literal notranslate"><span class="pre">data</span></code> correspond to some the labels A, B, and C. We can add those labels!</p>
+<p>Let’s say these columns in <code class="code docutils literal notranslate"><span class="pre">data</span></code> correspond to the labels A, B, and C. We can add those labels!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">paxfig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">paxfig</span><span class="o">.</span><span class="n">set_labels</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
