@@ -381,6 +381,17 @@ underlying plotted data are assumed.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="paxplot.PaxFigure.set_labels">
+<code class="sig-name descname">set_labels</code><span class="sig-paren">(</span><em class="sig-param">labels: list</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set labels for all axes. A wrapper for set_label</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>labels</strong> (<em>list</em>) – Labels for each axis. Must be same length as number of axes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="paxplot.PaxFigure.set_lim">
 <code class="sig-name descname">set_lim</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em>, <em class="sig-param">bottom: float</em>, <em class="sig-param">top: float</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_lim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set custom limits on axis</p>
@@ -426,23 +437,29 @@ underlying plotted data are assumed.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_label" title="paxplot.PaxFigure.set_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_label</span></code></a>(ax_idx, label)</p></td>
 <td><p>Set the label for the axis</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_even_ticks" title="paxplot.PaxFigure.set_even_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_even_ticks</span></code></a>(ax_idx[, n_ticks, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_labels" title="paxplot.PaxFigure.set_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_labels</span></code></a>(labels)</p></td>
+<td><p>Set labels for all axes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_even_ticks" title="paxplot.PaxFigure.set_even_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_even_ticks</span></code></a>(ax_idx[, n_ticks, …])</p></td>
 <td><p>Set evenly spaced axis ticks between minimum and maximum value.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_ticks" title="paxplot.PaxFigure.set_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_ticks</span></code></a>(ax_idx, ticks[, labels])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_ticks" title="paxplot.PaxFigure.set_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_ticks</span></code></a>(ax_idx, ticks[, labels])</p></td>
 <td><p>Set the axis tick locations and optionally labels.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_lim" title="paxplot.PaxFigure.set_lim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_lim</span></code></a>(ax_idx, bottom, top)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_lim" title="paxplot.PaxFigure.set_lim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_lim</span></code></a>(ax_idx, bottom, top)</p></td>
 <td><p>Set custom limits on axis</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.invert_axis" title="paxplot.PaxFigure.invert_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.invert_axis</span></code></a>(ax_idx)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.invert_axis" title="paxplot.PaxFigure.invert_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.invert_axis</span></code></a>(ax_idx)</p></td>
 <td><p>Invert axis</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.add_legend" title="paxplot.PaxFigure.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.add_legend</span></code></a>(labels)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.add_legend" title="paxplot.PaxFigure.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.add_legend</span></code></a>(labels)</p></td>
 <td><p>Create a legend for a specified figure</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.add_colorbar" title="paxplot.PaxFigure.add_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.add_colorbar</span></code></a>(ax_idx[, cmap, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.add_colorbar" title="paxplot.PaxFigure.add_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.add_colorbar</span></code></a>(ax_idx[, cmap, …])</p></td>
 <td><p>Add colorbar to paxfigure</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.savefig" title="paxplot.PaxFigure.savefig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.savefig</span></code></a>(fname, *[, transparent])</p></td>
+<td><p>Save the current figure.</p></td>
 </tr>
 </tbody>
 </table>
