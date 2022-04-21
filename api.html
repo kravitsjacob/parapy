@@ -3,8 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta charset="utf-8" />
     <title>API Reference &#8212; paxplot beta documentation</title>
     
     <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -27,15 +26,16 @@
     
     <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="canonical" href="https://kravitsjacob.github.io/paxplot/api.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Usage with Pandas" href="pandas_usage.html" />
+    <link rel="next" title="Release Notes" href="release.html" />
+    <link rel="prev" title="Examples" href="examples.html" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1X3E5JT92K"></script>
 <script>
@@ -90,14 +90,20 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="pandas_usage.html">
-  Usage with Pandas
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="release.html">
+  Release Notes
  </a>
 </li>
 
@@ -189,29 +195,29 @@
               
               <div>
                 
-  <section id="api-reference">
+  <div class="section" id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
-<section id="module-paxplot">
+<div class="section" id="module-paxplot">
 <span id="functions"></span><h2>Functions<a class="headerlink" href="#module-paxplot" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="paxplot.pax_parallel">
 <code class="sig-prename descclassname">paxplot.</code><code class="sig-name descname">pax_parallel</code><span class="sig-paren">(</span><em class="sig-param">n_axes: int</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.pax_parallel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper for paxplot analagous to the matplotlib.pyplot.subplots function</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>n_axes</strong> (<em>int</em>) – Number of axes to create</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>fig</strong> – Paxplot figure class</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#paxplot.PaxFigure" title="paxplot.PaxFigure">PaxFigure</a></p>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
-<section id="classes">
+</div>
+<div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="paxplot.PaxFigure">
@@ -221,7 +227,7 @@
 <code class="sig-name descname">add_colorbar</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em>, <em class="sig-param">cmap='viridis'</em>, <em class="sig-param">colorbar_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.add_colorbar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add colorbar to paxfigure</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ax</strong> (<em>int</em>) – axes index</p></li>
 <li><p><strong>data</strong> (<em>array-like</em>) – Data to be plotted</p></li>
@@ -234,10 +240,10 @@
 
 <dl class="method">
 <dt id="paxplot.PaxFigure.add_legend">
-<code class="sig-name descname">add_legend</code><span class="sig-paren">(</span><em class="sig-param">labels: list</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.add_legend" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_legend</code><span class="sig-paren">(</span><em class="sig-param">labels=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.add_legend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a legend for a specified figure</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>labels</strong> (<em>list</em>) – List of data labels</p>
 </dd>
 </dl>
@@ -248,7 +254,7 @@
 <code class="sig-name descname">invert_axis</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.invert_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Invert axis</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ax_idx</strong> (<em>int</em>) – Index of matplotlib axes</p>
 </dd>
 </dl>
@@ -256,11 +262,14 @@
 
 <dl class="method">
 <dt id="paxplot.PaxFigure.plot">
-<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">data: list</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.plot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">data: list</em>, <em class="sig-param">line_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the supplied data</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>data</strong> (<em>array-like</em>) – Data to be plotted</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array-like</em>) – Data to be plotted</p></li>
+<li><p><strong>line_kwargs</strong> (<em>dict</em>) – Keyword arguments for lines corresponding to data</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -279,7 +288,7 @@
 </div>
 <p>The available output formats depend on the backend being used.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>fname</strong> (<em>str</em><em> or </em><em>path-like</em><em> or </em><em>binary file-like</em>) – <p>A path, or a Python file-like object, or
 possibly some backend-dependent object such as
 <cite>matplotlib.backends.backend_pdf.PdfPages</cite>.</p>
@@ -290,13 +299,13 @@ is no attempt to make the extension, if any, of <em>fname</em> match
 <p>If <em>format</em> is not set, then the format is inferred from the
 extension of <em>fname</em>, if there is one.  If <em>format</em> is not
 set and <em>fname</em> has no extension, then the file is saved with
-<a href="#system-message-1"><span class="problematic" id="problematic-1">:rc:`savefig.format`</span></a> and the appropriate extension is appended to
+<a href="#id1"><span class="problematic" id="id2">:rc:`savefig.format`</span></a> and the appropriate extension is appended to
 <em>fname</em>.</p>
 </p>
 </dd>
-<dt class="field-even">Other Parameters<span class="colon">:</span></dt>
+<dt class="field-even">Other Parameters</dt>
 <dd class="field-even"><ul>
-<li><p><strong>dpi</strong> (float or ‘figure’, default: <a href="#system-message-2"><span class="problematic" id="problematic-2">:rc:`savefig.dpi`</span></a>) – The resolution in dots per inch.  If ‘figure’, use the figure’s
+<li><p><strong>dpi</strong> (float or ‘figure’, default: <a href="#id3"><span class="problematic" id="id4">:rc:`savefig.dpi`</span></a>) – The resolution in dots per inch.  If ‘figure’, use the figure’s
 dpi value.</p></li>
 <li><p><strong>format</strong> (<em>str</em>) – The file format, e.g. ‘png’, ‘pdf’, ‘svg’, … The behavior when
 this is unset is documented under <em>fname</em>.</p></li>
@@ -312,12 +321,12 @@ and defaults depend on the image format and backend:</p>
 <li><p>‘eps’ and ‘ps’ with PS backend: Only ‘Creator’ is supported.</p></li>
 </ul>
 </li>
-<li><p><strong>bbox_inches</strong> (str or <cite>.Bbox</cite>, default: <a href="#system-message-3"><span class="problematic" id="problematic-3">:rc:`savefig.bbox`</span></a>) – Bounding box in inches: only the given portion of the figure is
+<li><p><strong>bbox_inches</strong> (str or <cite>.Bbox</cite>, default: <a href="#id5"><span class="problematic" id="id6">:rc:`savefig.bbox`</span></a>) – Bounding box in inches: only the given portion of the figure is
 saved.  If ‘tight’, try to figure out the tight bbox of the figure.</p></li>
-<li><p><strong>pad_inches</strong> (float, default: <a href="#system-message-4"><span class="problematic" id="problematic-4">:rc:`savefig.pad_inches`</span></a>) – Amount of padding around the figure when bbox_inches is ‘tight’.</p></li>
-<li><p><strong>facecolor</strong> (color or ‘auto’, default: <a href="#system-message-5"><span class="problematic" id="problematic-5">:rc:`savefig.facecolor`</span></a>) – The facecolor of the figure.  If ‘auto’, use the current figure
+<li><p><strong>pad_inches</strong> (float, default: <a href="#id7"><span class="problematic" id="id8">:rc:`savefig.pad_inches`</span></a>) – Amount of padding around the figure when bbox_inches is ‘tight’.</p></li>
+<li><p><strong>facecolor</strong> (color or ‘auto’, default: <a href="#id9"><span class="problematic" id="id10">:rc:`savefig.facecolor`</span></a>) – The facecolor of the figure.  If ‘auto’, use the current figure
 facecolor.</p></li>
-<li><p><strong>edgecolor</strong> (color or ‘auto’, default: <a href="#system-message-6"><span class="problematic" id="problematic-6">:rc:`savefig.edgecolor`</span></a>) – The edgecolor of the figure.  If ‘auto’, use the current figure
+<li><p><strong>edgecolor</strong> (color or ‘auto’, default: <a href="#id11"><span class="problematic" id="id12">:rc:`savefig.edgecolor`</span></a>) – The edgecolor of the figure.  If ‘auto’, use the current figure
 edgecolor.</p></li>
 <li><p><strong>backend</strong> (<em>str, optional</em>) – Use a non-default backend to render the file, e.g. to render a
 png file with the “cairo” backend rather than the default “agg”,
@@ -357,7 +366,7 @@ tight bbox is calculated.</p></li>
 no minimum and maximum values are specified, the limits of the
 underlying plotted data are assumed.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ax_idx</strong> (<em>int</em>) – Index of matplotlib axes</p></li>
 <li><p><strong>n_ticks</strong> (<em>int</em>) – Number of ticks</p></li>
@@ -374,7 +383,7 @@ underlying plotted data are assumed.</p>
 <code class="sig-name descname">set_label</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em>, <em class="sig-param">label: str</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the label for the axis</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ax_idx</strong> (<em>int</em>) – Index of matplotlib axes</p></li>
 <li><p><strong>label</strong> (<em>str</em>) – The label text</p></li>
@@ -388,53 +397,27 @@ underlying plotted data are assumed.</p>
 <code class="sig-name descname">set_labels</code><span class="sig-paren">(</span><em class="sig-param">labels: list</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set labels for all axes. A wrapper for set_label</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>labels</strong> (<em>list</em>) – Labels for each axis. Must be same length as number of axes.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="paxplot.PaxFigure.set_lim">
-<code class="sig-name descname">set_lim</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em>, <em class="sig-param">bottom: float</em>, <em class="sig-param">top: float</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_lim" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set custom limits on axis</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ax_idx</strong> (<em>int</em>) – Index of matplotlib axes</p></li>
-<li><p><strong>bottom</strong> (<em>numeric</em>) – Lower limit</p></li>
-<li><p><strong>top</strong> (<em>numeric</em>) – Upper limit</p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="paxplot.PaxFigure.set_ticks">
-<code class="sig-name descname">set_ticks</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em>, <em class="sig-param">ticks: list</em>, <em class="sig-param">labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_ticks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the axis tick locations and optionally labels.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ax_idx</strong> (<em>int</em>) – Index of matplotlib axes</p></li>
-<li><p><strong>ticks</strong> (<em>list of floats</em>) – List of tick locations.</p></li>
-<li><p><strong>labels</strong> (<em>list of str</em><em>, </em><em>optional</em>) – List of tick labels. If not set, the labels show the data value.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</section>
-<section id="contents">
+</div>
+<div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.pax_parallel" title="paxplot.pax_parallel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pax_parallel</span></code></a>(n_axes)</p></td>
 <td><p>Wrapper for paxplot analagous to the matplotlib.pyplot.subplots function</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.plot" title="paxplot.PaxFigure.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.plot</span></code></a>(data)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.plot" title="paxplot.PaxFigure.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.plot</span></code></a>(data[, line_kwargs])</p></td>
 <td><p>Plot the supplied data</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_label" title="paxplot.PaxFigure.set_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_label</span></code></a>(ax_idx, label)</p></td>
@@ -446,16 +429,16 @@ underlying plotted data are assumed.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_even_ticks" title="paxplot.PaxFigure.set_even_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_even_ticks</span></code></a>(ax_idx[, n_ticks, …])</p></td>
 <td><p>Set evenly spaced axis ticks between minimum and maximum value.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_ticks" title="paxplot.PaxFigure.set_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_ticks</span></code></a>(ax_idx, ticks[, labels])</p></td>
-<td><p>Set the axis tick locations and optionally labels.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_ticks</span></code>(ax_idx, ticks[, labels])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_lim" title="paxplot.PaxFigure.set_lim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_lim</span></code></a>(ax_idx, bottom, top)</p></td>
-<td><p>Set custom limits on axis</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_lim</span></code>(ax_idx, bottom, top)</p></td>
+<td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.invert_axis" title="paxplot.PaxFigure.invert_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.invert_axis</span></code></a>(ax_idx)</p></td>
 <td><p>Invert axis</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.add_legend" title="paxplot.PaxFigure.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.add_legend</span></code></a>(labels)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.add_legend" title="paxplot.PaxFigure.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.add_legend</span></code></a>([labels])</p></td>
 <td><p>Create a legend for a specified figure</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.add_colorbar" title="paxplot.PaxFigure.add_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.add_colorbar</span></code></a>(ax_idx[, cmap, …])</p></td>
@@ -466,8 +449,8 @@ underlying plotted data are assumed.</p>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+</div>
+</div>
 
 
               </div>
@@ -475,12 +458,19 @@ underlying plotted data are assumed.</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="pandas_usage.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="examples.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Usage with Pandas</p>
+            <p class="prev-next-title">Examples</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="release.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Release Notes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
               
@@ -502,7 +492,7 @@ underlying plotted data are assumed.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br>
 </p>
     </div>
     

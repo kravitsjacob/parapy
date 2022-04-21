@@ -3,8 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta charset="utf-8" />
     <title>Getting Started &#8212; paxplot beta documentation</title>
     
     <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -27,11 +26,11 @@
     
     <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="canonical" href="https://kravitsjacob.github.io/paxplot/getting_started.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -91,14 +90,20 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="pandas_usage.html">
-  Usage with Pandas
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="api.html">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="release.html">
+  Release Notes
  </a>
 </li>
 
@@ -202,18 +207,18 @@
               
               <div>
                 
-  <section id="getting-started">
+  <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<section id="installation">
+<div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>To use Paxplot, first install it using PyPI:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install paxplot
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install paxplot
 </pre></div>
 </div>
-</section>
-<section id="basic-usage">
+</div>
+<div class="section" id="basic-usage">
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
-<p>We run through the basic functionality of Paxplot using the following synthetic dataset. Note that Paxplot requires its input be in a list of lists or a similar matrix-like format. For usage with Pandas, click <a class="reference external" href="pandas_usage.html">here</a>.</p>
+<p>We run through the basic functionality of Paxplot using the following synthetic dataset. Note that Paxplot requires its input be in a list of lists or a similar matrix-like format. For usage with Pandas, click <a class="reference external" href="examples.html#pandas">here</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
    <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
    <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
@@ -221,7 +226,7 @@
 <span class="p">]</span>
 </pre></div>
 </div>
-<section id="creating-a-simple-plot">
+<div class="section" id="creating-a-simple-plot">
 <h3>Creating a Simple Plot<a class="headerlink" href="#creating-a-simple-plot" title="Permalink to this headline">¶</a></h3>
 <p>First, we will create a simple plot of our <code class="code docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paxplot</span>
@@ -232,8 +237,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/basic.svg" src="_images/basic.svg" /></section>
-<section id="adding-labels">
+<img alt="_images/basic.svg" src="_images/basic.svg" /></div>
+<div class="section" id="adding-labels">
 <h3>Adding Labels<a class="headerlink" href="#adding-labels" title="Permalink to this headline">¶</a></h3>
 <p>Let’s say these columns in <code class="code docutils literal notranslate"><span class="pre">data</span></code> correspond to the labels A, B, and C. We can add those labels!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -242,17 +247,17 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/labels.svg" src="_images/labels.svg" /></section>
-<section id="saving-your-plot">
+<img alt="_images/labels.svg" src="_images/labels.svg" /></div>
+<div class="section" id="saving-your-plot">
 <h3>Saving Your Plot<a class="headerlink" href="#saving-your-plot" title="Permalink to this headline">¶</a></h3>
 <p>You can easily export your plot in many standard vector and raster formats.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;my_plot.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Paxplot has lots of additional functionality. Continue onto the next section to see additional examples.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
               </div>
@@ -294,7 +299,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br>
 </p>
     </div>
     

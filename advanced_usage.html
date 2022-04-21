@@ -3,8 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta charset="utf-8" />
     <title>Advanced Usage &#8212; paxplot beta documentation</title>
     
     <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -27,15 +26,15 @@
     
     <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="canonical" href="https://kravitsjacob.github.io/paxplot/advanced_usage.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Usage with Pandas" href="pandas_usage.html" />
+    <link rel="next" title="Examples" href="examples.html" />
     <link rel="prev" title="Getting Started" href="getting_started.html" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1X3E5JT92K"></script>
@@ -91,14 +90,20 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="pandas_usage.html">
-  Usage with Pandas
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="api.html">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="release.html">
+  Release Notes
  </a>
 </li>
 
@@ -210,7 +215,7 @@
               
               <div>
                 
-  <section id="advanced-usage">
+  <div class="section" id="advanced-usage">
 <h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h1>
 <p>We run through the advanced functionality of Paxplot using the following synthetic dataset. Note, that Paxplot requires its input be a list of lists or a similar matrix-like format.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
@@ -220,7 +225,7 @@
 <span class="p">]</span>
 </pre></div>
 </div>
-<section id="change-number-of-ticks">
+<div class="section" id="change-number-of-ticks">
 <h2>Change Number of Ticks<a class="headerlink" href="#change-number-of-ticks" title="Permalink to this headline">¶</a></h2>
 <p>By default, Paxplot chooses evenly-spaced ticks between the upper and lower limits of the plotted data. You can change that though!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -237,8 +242,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/even_ticks.svg" src="_images/even_ticks.svg" /></section>
-<section id="custom-ticks">
+<img alt="_images/even_ticks.svg" src="_images/even_ticks.svg" /></div>
+<div class="section" id="custom-ticks">
 <h2>Custom Ticks<a class="headerlink" href="#custom-ticks" title="Permalink to this headline">¶</a></h2>
 <p>Paxplot also gives you the flexibility to set whatever ticks you want, and they can say <a class="reference external" href="https://www.youtube.com/watch?v=jRHQPG1xd9o">whatever you want</a>!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -255,8 +260,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/custom_ticks.svg" src="_images/custom_ticks.svg" /></section>
-<section id="change-axis-limits">
+<img alt="_images/custom_ticks.svg" src="_images/custom_ticks.svg" /></div>
+<div class="section" id="change-axis-limits">
 <h2>Change Axis Limits<a class="headerlink" href="#change-axis-limits" title="Permalink to this headline">¶</a></h2>
 <p>By default, Paxplot chooses the axis limits as bounds of the plotted data. You can also change that!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -266,8 +271,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/limits.svg" src="_images/limits.svg" /></section>
-<section id="axis-inversion">
+<img alt="_images/limits.svg" src="_images/limits.svg" /></div>
+<div class="section" id="axis-inversion">
 <h2>Axis Inversion<a class="headerlink" href="#axis-inversion" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes it’s helpful to invert (flip) an axis. This is particularly helpful when looking at high-dimensional <a class="reference external" href="https://arxiv.org/pdf/1705.00368.pdf">Pareto fronts</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -277,8 +282,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/invert.svg" src="_images/invert.svg" /></section>
-<section id="adding-a-legend">
+<img alt="_images/invert.svg" src="_images/invert.svg" /></div>
+<div class="section" id="adding-a-legend">
 <h2>Adding a Legend<a class="headerlink" href="#adding-a-legend" title="Permalink to this headline">¶</a></h2>
 <p>It can be nice to plot a legend to identify each line. This works well if you have a few observations.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -287,10 +292,10 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/legend.svg" src="_images/legend.svg" /></section>
-<section id="adding-a-colorbar">
+<img alt="_images/legend.svg" src="_images/legend.svg" /></div>
+<div class="section" id="adding-a-colorbar">
 <h2>Adding a Colorbar<a class="headerlink" href="#adding-a-colorbar" title="Permalink to this headline">¶</a></h2>
-<p>If you have many observations, it is helpful to use a colorbar to distinguish each line. You should also reference the Pandas integration <a class="reference external" href="pandas_usage.html">example</a> for another usage of the colorbar.</p>
+<p>If you have many observations, it is helpful to use a colorbar to distinguish each line. You should also reference the Pandas integration <a class="reference external" href="examples.html#pandas">example</a> for another usage of the colorbar.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">paxfig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">paxfig</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span>
@@ -305,8 +310,8 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/colorbar.svg" src="_images/colorbar.svg" /></section>
-<section id="accessing-matplotlib-objects">
+<img alt="_images/colorbar.svg" src="_images/colorbar.svg" /></div>
+<div class="section" id="accessing-matplotlib-objects">
 <h2>Accessing Matplotlib Objects<a class="headerlink" href="#accessing-matplotlib-objects" title="Permalink to this headline">¶</a></h2>
 <p>Paxplot is an extension of Matplotlib’s <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html">subplots</a> wrapper. Paxplot gives you the ability to access the individual Matplotlib axes as well as all the associated functionality using <code class="code docutils literal notranslate"><span class="pre">.axes</span></code>. To demonstrate this, imagine you want to annotate your Paxplot with a label and arrow. That functionality has not been explicitly added to Paxplot, however it does exist for Matplotlib <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.arrow.html">axes</a>. Paxplot still allows us to access that functionality!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paxfig</span> <span class="o">=</span> <span class="n">paxplot</span><span class="o">.</span><span class="n">pax_parallel</span><span class="p">(</span><span class="n">n_axes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -326,9 +331,9 @@
 <img alt="_images/arrow.svg" src="_images/arrow.svg" /><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Access Matplotib axes with caution. Some functions can break your Paxfig object. Using many of these functions will generate a warning from Paxplot.</p>
-</aside>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
               </div>
@@ -343,10 +348,10 @@
             <p class="prev-next-title">Getting Started</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="pandas_usage.html" title="next page">
+    <a class='right-next' id="next-link" href="examples.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Usage with Pandas</p>
+        <p class="prev-next-title">Examples</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -370,7 +375,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br>
 </p>
     </div>
     
