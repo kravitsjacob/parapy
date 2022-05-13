@@ -403,6 +403,36 @@ underlying plotted data are assumed.</p>
 </dl>
 </dd></dl>
 
+<dl class="method">
+<dt id="paxplot.PaxFigure.set_lim">
+<code class="sig-name descname">set_lim</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em>, <em class="sig-param">bottom: float</em>, <em class="sig-param">top: float</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_lim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set custom limits on axis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax_idx</strong> (<em>int</em>) – Index of matplotlib axes</p></li>
+<li><p><strong>bottom</strong> (<em>numeric</em>) – Lower limit</p></li>
+<li><p><strong>top</strong> (<em>numeric</em>) – Upper limit</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="paxplot.PaxFigure.set_ticks">
+<code class="sig-name descname">set_ticks</code><span class="sig-paren">(</span><em class="sig-param">ax_idx: int</em>, <em class="sig-param">ticks: list</em>, <em class="sig-param">labels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#paxplot.PaxFigure.set_ticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the axis tick locations and optionally labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax_idx</strong> (<em>int</em>) – Index of matplotlib axes</p></li>
+<li><p><strong>ticks</strong> (<em>list of floats</em>) – List of tick locations.</p></li>
+<li><p><strong>labels</strong> (<em>list of str</em><em>, </em><em>optional</em>) – List of tick labels. If not set, the labels show the data value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -429,11 +459,11 @@ underlying plotted data are assumed.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_even_ticks" title="paxplot.PaxFigure.set_even_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_even_ticks</span></code></a>(ax_idx[, n_ticks, …])</p></td>
 <td><p>Set evenly spaced axis ticks between minimum and maximum value.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_ticks</span></code>(ax_idx, ticks[, labels])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_ticks" title="paxplot.PaxFigure.set_ticks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_ticks</span></code></a>(ax_idx, ticks[, labels])</p></td>
+<td><p>Set the axis tick locations and optionally labels.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_lim</span></code>(ax_idx, bottom, top)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#paxplot.PaxFigure.set_lim" title="paxplot.PaxFigure.set_lim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.set_lim</span></code></a>(ax_idx, bottom, top)</p></td>
+<td><p>Set custom limits on axis</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#paxplot.PaxFigure.invert_axis" title="paxplot.PaxFigure.invert_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PaxFigure.invert_axis</span></code></a>(ax_idx)</p></td>
 <td><p>Invert axis</p></td>
