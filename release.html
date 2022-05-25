@@ -159,6 +159,11 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-0-1-4-beta">
+   Version 0.1.4 (beta)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#version-0-1-3-beta">
    Version 0.1.3 (beta)
   </a>
@@ -223,6 +228,15 @@
                 
   <div class="section" id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-0-1-4-beta">
+<h2>Version 0.1.4 (beta)<a class="headerlink" href="#version-0-1-4-beta" title="Permalink to this headline">¶</a></h2>
+<p>Paxplot now includes another testing dataset from contributor <a class="reference external" href="https://github.com/nelerey">Nele Reyniers</a>. Here is how to access it as a Pandas DataFrame:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paxplot</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">paxplot</span><span class="o">.</span><span class="n">hydroclimate_model_evaluation</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="version-0-1-3-beta">
 <h2>Version 0.1.3 (beta)<a class="headerlink" href="#version-0-1-3-beta" title="Permalink to this headline">¶</a></h2>
 <p>Paxplot’s testing now follows more standard procedures in that it uses an install of paxplot rather than relative imports. Contributors should now use <code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--editable</span> <span class="pre">.</span></code> to ensure they are referencing their development installs rather than a previously downloaded install. See the Paxplot’s <a class="reference external" href="https://github.com/kravitsjacob/paxplot/actions">actions page</a> for the continous integration tests.</p>
